@@ -1,4 +1,4 @@
-package com.cognitionbox.petra.ast.interp.util;
+package com.cognitionbox.petra.stdlib.coord;
 
 import com.cognitionbox.petra.ast.interp.util.reactive.EntryPoint;
 import com.cognitionbox.petra.ast.interp.util.reactive.Reactive;
