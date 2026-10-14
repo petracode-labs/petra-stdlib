@@ -1,0 +1,38 @@
+// 1. Whitelist the Maven Cache (JUnit, Surefire Dependencies, Petra Framework)
+// Includes triple-slash fallbacks for Linux CI symlink resolution
+grant codeBase "file:${maven.repo.local}/-" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:///${maven.repo.local}/-" {
+    permission java.security.AllPermission;
+};
+
+// 2. Whitelist Surefire Booter (The test orchestrator)
+grant codeBase "file:${user.dir}/target/surefire/-" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:///${user.dir}/target/surefire/-" {
+    permission java.security.AllPermission;
+};
+
+// 3. Dynamic Execution Engine (/tmp/)
+grant codeBase "file:${java.io.tmpdir}/-" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:/tmp/-" {
+    permission java.security.AllPermission;
+};
+
+// 4. The PR Sandbox (Baseline for the JDK Compiler & Untrusted Code)
+grant {
+    permission java.util.PropertyPermission "*", "read";
+    
+    // Compiler needs to read JDK and Classpath
+    permission java.io.FilePermission "${java.home}/-", "read";
+    permission java.io.FilePermission "${maven.repo.local}/-", "read";
+    permission java.io.FilePermission "${user.dir}/target/-", "read";
+    
+    // Compiler needs to write intermediate files
+    permission java.io.FilePermission "${java.io.tmpdir}/-", "read,write,delete";
+    permission java.io.FilePermission "/tmp/-", "read,write,delete";
+};
