@@ -11,7 +11,7 @@ jobs:
         issues: write
         contents: read
         actions: read
-    uses: petracode-labs/build-engine/.github/workflows/reusable-engine.yml@main
+    uses: petracode-labs/build-engine/.github/workflows/petra-stdlib-engine.yml@main
     with:
       # This ensures the build actually tests the FORK'S code
       ref: ${{ github.event.pull_request.head.sha }}
