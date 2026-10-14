@@ -2,6 +2,7 @@ name: Automic Fork CI (Contributor-Only Auto Build)
 on:
   pull_request_target:
     branches: [main]
+  workflow_dispatch: # Allows clicking "Run workflow" manually from the Actions tab  
 
 jobs:
   call-security-engine:
