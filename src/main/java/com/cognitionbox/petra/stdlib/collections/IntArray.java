@@ -1,5 +1,8 @@
 package com.cognitionbox.petra.stdlib.collections;
 
+import com.cognitionbox.petra.ast.terms.Base;
+
+@Base
 public final class IntArray {
       public final int[] data;
       public final int length;
