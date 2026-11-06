@@ -9,7 +9,7 @@ import java.util.Collection;
 
 @RunWith(Parameterized.class)
 public class IntArrayVerification extends PetraVerification {
-    public BaseAlgorithmsVerification(PetraTask task) {
+    public IntArrayVerification(PetraTask task) {
         super(task);
     }
 
