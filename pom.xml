@@ -6,7 +6,7 @@
 
 <groupId>com.cognitionbox.petra.stdlib</groupId>
 <artifactId>petra-stdlib</artifactId>
-<version>0.0.1</version>
+<version>0.0.2</version>
 <build>
     <plugins>
         <plugin>
@@ -53,6 +53,12 @@
        <artifactId>petra-verifier</artifactId>
        <version>0.2.6</version>
      </dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.13.2</version>
+        <scope>compile</scope>
+    </dependency>
      <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>

@@ -3,36 +3,8 @@ package com.cognitionbox.petra.ast.interp.util;
 import com.cognitionbox.petra.ast.interp.util.reactive.EntryPoint;
 import com.cognitionbox.petra.ast.interp.util.reactive.Reactive;
 import com.cognitionbox.petra.ast.interp.util.reactive.Updateable;
-import com.cognitionbox.petra.ast.parsers.MainParser;
-import com.cognitionbox.petra.ast.parsers.ObjParser;
-import com.cognitionbox.petra.ast.terms.Obj;
-import com.cognitionbox.petra.ast.terms.Prog;
-
-import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public final class Program {
-
-    public static Prog buildProgram(String rootPath, String entryPointMethodName, String rootObjectName, String... javaSrcFileNames) throws URISyntaxException, IOException {
-        AtomicInteger sequencer = new AtomicInteger();
-        List<Obj> objs = new ArrayList<>();
-        for (int i=0;i<javaSrcFileNames.length;i++){
-            String fileName = javaSrcFileNames[i];
-            File file = new File(rootPath+fileName+".java");
-            if (i==0){
-                MainParser mainParser = new MainParser();
-            } else {
-                ObjParser parser = new ObjParser(sequencer, file.getAbsolutePath(),true);
-                Obj o = parser.parse(fileName,null);
-                objs.add(o);
-            }
-        }
-        return new Prog(sequencer,rootObjectName,objs);
-    }
 
     public static void sep(Runnable... runnables){
         boolean parallelize = true;
