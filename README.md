@@ -12,8 +12,7 @@ For full background on the Petra paradigm, see the [What is Petra? Guide](https:
 
 - **Intentionally Lightweight:** Contains only essential verified primitives to keep computational verification overhead to a minimum.
 - **Verified Collections & ADTs:** Standardised, formally verified collections (lists, maps, sets) and abstract data structures for reachability and protocol verification.
-- **Coord/Base Alignment:** Tailored specifically for Petra's architectural separation of protocol coordination (`Coord`) and low-level state (`Base`).
-- **Polyglot Roadmap:** Initial core focus on **Java** and **C++**, expanding outward to additional mainstream and systems languages.
+- **Polyglot Roadmap:** Initial core focus on **Java** and **C++**, expanding outward to additional mainstream and systems languages. The intention is to align implementations across all supported languages, which is possible as **Petra Coord / Base** are simplified subsets of OOP subsets. 
 - **Ecosystem Requirement:** Functions as a required dependency across `petra-examples` and related Petra modules.
 
 ---
