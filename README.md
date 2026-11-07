@@ -24,7 +24,13 @@ For full background on the Petra paradigm, see the [What is Petra? Guide](https:
 
 ### Java / Maven Setup
 
-Add the following dependency to the `pom.xml` of your `petra-examples` project (or any Petra-based Java project):
+First, build and install `petra-stdlib` to your local repository:
+
+```bash
+mvn clean install
+```
+
+Then, add the following dependency to the `pom.xml` of your `petra-examples` project (or any Petra-based Java project):
 
 ```xml
 <dependency>
