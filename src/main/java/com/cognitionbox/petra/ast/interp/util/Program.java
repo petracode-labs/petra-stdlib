@@ -1,8 +1,8 @@
-package com.cognitionbox.petra.stdlib.ast.interp.util;
+package com.cognitionbox.petra.ast.interp.util;
 
-import com.cognitionbox.petra.stdlib.ast.interp.util.reactive.EntryPoint;
-import com.cognitionbox.petra.stdlib.ast.interp.util.reactive.Reactive;
-import com.cognitionbox.petra.stdlib.ast.interp.util.reactive.Updateable;
+import com.cognitionbox.petra.ast.interp.util.reactive.EntryPoint;
+import com.cognitionbox.petra.ast.interp.util.reactive.Reactive;
+import com.cognitionbox.petra.ast.interp.util.reactive.Updateable;
 
 public final class Program {
 

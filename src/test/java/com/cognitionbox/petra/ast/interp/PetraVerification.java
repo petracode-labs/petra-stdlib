@@ -1,6 +1,6 @@
-package com.cognitionbox.petra.stdlib.ast.interp;
+package com.cognitionbox.petra.ast.interp;
 
-import com.cognitionbox.petra.stdlib.ast.interp.junit.tasks.PetraTask;
+import com.cognitionbox.petra.ast.interp.junit.tasks.PetraTask;
 
 import java.util.Collection;
 
