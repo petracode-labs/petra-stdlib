@@ -1,4 +1,4 @@
-name: petra-stdlib (built using Petra Verifier)
+name: petra-stdlib (built with Petra Verifier)
 on:
   pull_request_target:
     branches: [main]
