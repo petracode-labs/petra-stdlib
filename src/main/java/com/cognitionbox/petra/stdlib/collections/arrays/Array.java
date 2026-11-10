@@ -1,8 +1,11 @@
-package com.cognitionbox.petra.stdlib.collections;
+package com.cognitionbox.petra.stdlib.collections.arrays;
 
+import com.cognitionbox.petra.ast.terms.Base;
+
+@Base
 public final class Array<T> {
-      public final T[] data;
-      public final int length;
+      private final T[] data;
+      private final int length;
 
       public Array(final int capacity) {
           assert capacity > 0 : "Capacity must be greater than zero";

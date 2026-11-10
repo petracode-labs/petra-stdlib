@@ -1,4 +1,4 @@
-package com.cognitionbox.petra.stdlib.collections;
+package com.cognitionbox.petra.stdlib.collections.arrays.verifications;
 
 import com.cognitionbox.petra.ast.interp.PetraVerification;
 import com.cognitionbox.petra.ast.interp.junit.tasks.PetraTask;
@@ -15,6 +15,6 @@ public class IntArrayVerification extends PetraVerification {
 
     @Parameterized.Parameters(name = "{0}")
     public static Collection tasks() {
-        return verifyBase("com/cognitionbox/petra/stdlib/collections/", "IntArray", Language.JAVA);
+        return verifyBase("com/cognitionbox/petra/stdlib/collections/arrays/", "IntArrayVerificationUnit", Language.JAVA);
     }
 }

@@ -1,8 +1,11 @@
-package com.cognitionbox.petra.stdlib.collections;
+package com.cognitionbox.petra.stdlib.collections.arrays;
 
+import com.cognitionbox.petra.ast.terms.Base;
+
+@Base
 public final class IntArray {
-      public final int[] data;
-      public final int length;
+      private final int[] data;
+      private final int length;
 
       public IntArray(final int capacity) {
           assert capacity > 0 : "Capacity must be greater than zero";
@@ -17,8 +20,10 @@ public final class IntArray {
       }
 
       public void set(final int index, final int value) {
+          assert index >= 0 : "Index cannot be negative!!!";
           assert index >= 0 : "Index cannot be negative";
           assert index < this.length : "Index out of bounds: index exceeds length";
           this.data[index] = value;
       }
+
   }
