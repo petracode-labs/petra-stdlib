@@ -1,4 +1,4 @@
-name: Automic Fork CI (Contributor-Only Auto Build)
+name: petra-stdlib (built using Petra Verifier)
 on:
   pull_request_target:
     branches: [main]
