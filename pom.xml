@@ -16,6 +16,10 @@
                 <source>11</source>
                 <target>11</target>
                 <compilerArgument>-proc:none</compilerArgument>
+                <excludes>
+                    <exclude>com/cognitionbox/petra/ast/interp/junit/tasks/PetraTask.java</exclude>
+                    <exclude>com/cognitionbox/petra/ast/interp/PetraVerification.java</exclude>
+                </excludes>
             </configuration>
         </plugin>
          <plugin>
