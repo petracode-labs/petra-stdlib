@@ -23,6 +23,16 @@ For full background on the Petra paradigm, see the [What is Petra? Guide](https:
 
 ### Java / Maven Setup
 
+In order to successfully compile and build the project locally you will need to remove the following ```petra-verifier``` dependency, either by deleting or commenting out the current verifier dependency (do not commit this change):
+
+```xml
+<dependency>
+   <groupId>com.cognitionbox.petra</groupId>
+   <artifactId>petra-verifier</artifactId>
+   <version>0.2.8-SNAPSHOT</version>
+ </dependency>
+```
+
 First, build and install `petra-stdlib` to your local repository:
 
 ```bash
