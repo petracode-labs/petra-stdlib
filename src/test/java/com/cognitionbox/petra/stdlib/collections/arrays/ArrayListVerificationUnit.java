@@ -1,17 +1,17 @@
-package com.cognitionbox.petra.stdlib.collections;
+package com.cognitionbox.petra.stdlib.collections.arrays;
 
 import com.cognitionbox.petra.ast.interp.VerificationUnit;
 import com.cognitionbox.petra.ast.terms.Base;
 
 @Base
-public class ArrayListVerificationUnit implements VerificationUnit<ArrayList<Object>> {
+public class ArrayListVerificationUnit implements VerificationUnit<ArrayListV2<Object>> {
     private final int initialCapacity = 2;
-    private final ArrayList<Object> list = new ArrayList<>(initialCapacity);
+    private final ArrayListV2<Object> list = new ArrayListV2<>(initialCapacity);
     private final Object element = new Object();
     private int index;
 
     @Override
-    public ArrayList<Object> target() {
+    public ArrayListV2<Object> target() {
         return list;
     }
 
@@ -21,28 +21,28 @@ public class ArrayListVerificationUnit implements VerificationUnit<ArrayList<Obj
 
     public void verifyGetBoundsValid() {
         if (index >= 0 && index < list.size()) {
-            list.get(index);
+            list.getAt(index);
         }
     }
 
     public void verifyGetBoundsFail() {
         try {
             if (index < 0 || index >= list.size()) {
-                list.get(index);
+                list.getAt(index);
             }
         } catch (AssertionError e) {}
     }
 
     public void verifySetBoundsValid() {
         if (index >= 0 && index < list.size()) {
-            list.set(index, element);
+            list.setAt(index, element);
         }
     }
 
     public void verifySetBoundsFail() {
         try {
             if (index < 0 || index >= list.size()) {
-                list.set(index, element);
+                list.setAt(index, element);
             }
         } catch (AssertionError e) {}
     }

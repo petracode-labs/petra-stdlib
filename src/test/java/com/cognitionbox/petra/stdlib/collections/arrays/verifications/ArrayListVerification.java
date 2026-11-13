@@ -15,6 +15,6 @@ public class ArrayListVerification extends PetraVerification {
 
     @Parameterized.Parameters(name = "{0}")
     public static Collection tasks() {
-        return verifyBase("com/cognitionbox/petra/stdlib/collections/", "ArrayListVerificationUnit", Language.JAVA);
+        return verifyBase("com/cognitionbox/petra/stdlib/collections/arrays/", "ArrayListVerificationUnit", Language.JAVA);
     }
 }

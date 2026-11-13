@@ -6,7 +6,7 @@
 
 <groupId>com.cognitionbox.petra.stdlib</groupId>
 <artifactId>petra-stdlib</artifactId>
-<version>0.0.21</version>
+<version>0.0.22</version>
 <build>
     <plugins>
         <plugin>
