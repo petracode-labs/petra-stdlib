@@ -9,7 +9,7 @@ public class ArrayHashMapVerificationUnit implements VerificationUnit<ArrayHashM
     private final int capacity = 3;
     private final ArrayHashMap<Integer, Object> map = new ArrayHashMap<>(capacity);
     private final Object value = new Object();
-    private Integer key;
+    private int key;
 
     @Override
     public ArrayHashMap<Integer, Object> target() {
@@ -17,33 +17,33 @@ public class ArrayHashMapVerificationUnit implements VerificationUnit<ArrayHashM
     }
 
     public void verifyPutValid() {
-        if (key != null) {
+        if (key > 0 && key < 10) {
             map.put(key, value);
         }
     }
 
     public void verifyGetValid() {
-        if (key != null && map.containsKey(key)) {
+        if (key > 0 && key < 10 && map.containsKey(key)) {
             map.get(key);
         }
     }
 
     public void verifyGetMissingKeyFail() {
         try {
-            if (key != null && !map.containsKey(key)) {
+            if (key > 0 && key < 10 && !map.containsKey(key)) {
                 map.get(key);
             }
         } catch (AssertionError e) {}
     }
 
     public void verifyRemoveValid() {
-        if (key != null) {
+        if (key > 0 && key < 10) {
             map.remove(key);
         }
     }
 
     public void verifyContainsKeyValid() {
-        if (key != null) {
+        if (key > 0 && key < 10) {
             map.containsKey(key);
         }
     }

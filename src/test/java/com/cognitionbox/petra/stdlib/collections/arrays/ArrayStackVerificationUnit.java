@@ -1,7 +1,8 @@
-package com.cognitionbox.petra.stdlib.collections;
+package com.cognitionbox.petra.stdlib.collections.arrays;
 
 import com.cognitionbox.petra.ast.interp.VerificationUnit;
 import com.cognitionbox.petra.ast.terms.Base;
+import com.cognitionbox.petra.stdlib.collections.ArrayStack;
 
 @Base
 public class ArrayStackVerificationUnit implements VerificationUnit<ArrayStack<Object>> {

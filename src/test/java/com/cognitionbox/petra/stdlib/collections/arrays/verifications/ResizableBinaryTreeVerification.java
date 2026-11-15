@@ -8,13 +8,13 @@ import org.junit.runners.Parameterized;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class ArrayListVerification extends PetraVerification {
-    public ArrayListVerification(PetraTask task) {
+public class ResizableBinaryTreeVerification extends PetraVerification {
+    public ResizableBinaryTreeVerification(PetraTask task) {
         super(task);
     }
 
     @Parameterized.Parameters(name = "{0}")
     public static Collection tasks() {
-        return verifyBase("com/cognitionbox/petra/stdlib/collections/arrays/", "ArrayListVerificationUnit", Language.JAVA);
+        return verifyBase("com/cognitionbox/petra/stdlib/collections/trees/", "ResizableBinaryTreeVerificationUnit", Language.JAVA);
     }
 }
