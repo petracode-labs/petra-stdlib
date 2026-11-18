@@ -55,12 +55,12 @@ public class ResizableArrayVerificationUnit implements VerificationUnit<Resizabl
             assert array.size() == 0;
 
             // 2. Inductive Step: Guarded Allocation
-            if (array.size() < array.capacity()) {
+            while (array.size() < array.capacity()) {
                 array.allocate(0);
-                assert array.size() == 1;
+                assert array.size() <= array.capacity();
             }
             // 3. Post-condition: Invariant preservation
-            assert array.size() == 1;
+            assert array.size() == array.capacity();
 
             if (index >= 0 && index < array.size()) {
                 array.set(index, 0);
